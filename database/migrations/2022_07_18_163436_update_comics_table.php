@@ -32,13 +32,13 @@ class UpdateComicsTable extends Migration
     public function down()
     {
         Schema::table('comics', function (Blueprint $table) {
-            $table->string('title');
-            $table->string('description');
-            $table->string('thumb');
-            $table->float('price',2,2);
-            $table->string('series');
-            $table->date('sale_date');
-            $table->string('type');
+            $table->dropColumn('title');
+            $table->dropColumn('description');
+            $table->dropColumn('thumb');
+            $table->dropColumn('price');
+            $table->dropColumn('series');
+            $table->dropColumn('sale_date');
+            $table->dropColumn('type');
         });
     }
 }
